@@ -249,12 +249,14 @@
         .footer-left {
             display: flex;
             align-items: center;
-            gap: 10px;
+            gap: 15px;
+            /* Increased gap */
         }
 
-        .plugin-name {
-            font-weight: 600;
-            color: #cbd5e1;
+        .footer-logo {
+            height: 28px;
+            width: auto;
+            display: block;
         }
 
         .get-plugin-btn {
@@ -382,7 +384,8 @@
 
             <div class="wppg-footer-refined">
                 <div class="footer-left">
-                    <span class="plugin-name">WP Project Guard</span>
+                    <img src="<?php echo WPPG_URL . 'assets/images/logo-horizontal.webp'; ?>" alt="WP Project Guard"
+                        class="footer-logo">
                     <a href="https://github.com/engrhammadkhurshid/WP-Project-Gaurd" target="_blank"
                         class="get-plugin-btn">
                         <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"

@@ -232,74 +232,75 @@
             justify-content: space-between;
             gap: 15px;
             font-size: 13px;
-        }
 
-        .footer-left {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-
-        .plugin-name {
-            font-weight: 600;
-            color: var(--text-muted);
-        }
-
-        .get-plugin-btn {
-            display: flex;
-            align-items: center;
-            gap: 5px;
-            color: var(--primary-color);
-            text-decoration: none;
-            font-weight: 600;
-            background: #eff6ff;
-            padding: 4px 10px;
-            border-radius: 6px;
-            transition: background 0.2s;
-        }
-
-        .get-plugin-btn:hover {
-            background: #dbeafe;
-        }
-
-        .footer-right {
-            display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            gap: 5px;
-            text-align: right;
-        }
-
-        .dev-credit {
-            color: var(--text-muted);
-        }
-
-        .social-links {
-            display: flex;
-            gap: 12px;
-        }
-
-        .social-links a {
-            color: #94a3b8;
-            transition: color 0.2s;
-        }
-
-        .social-links a:hover {
-            color: var(--primary-color);
-        }
-
-        @media (max-width: 480px) {
-            .wppg-footer-refined {
-                flex-direction: column;
-                text-align: center;
+            .footer-left {
+                display: flex;
                 align-items: center;
+                gap: 15px;
+                /* Increased gap */
+            }
+
+            .footer-logo {
+                height: 28px;
+                width: auto;
+                display: block;
+            }
+
+            .get-plugin-btn {
+                display: flex;
+                align-items: center;
+                gap: 5px;
+                color: var(--primary-color);
+                text-decoration: none;
+                font-weight: 600;
+                background: #eff6ff;
+                padding: 4px 10px;
+                border-radius: 6px;
+                transition: background 0.2s;
+            }
+
+            .get-plugin-btn:hover {
+                background: #dbeafe;
             }
 
             .footer-right {
-                align-items: center;
-                text-align: center;
+                display: flex;
+                flex-direction: column;
+                align-items: flex-end;
+                gap: 5px;
+                text-align: right;
             }
-        }
+
+            .dev-credit {
+                color: var(--text-muted);
+            }
+
+            .social-links {
+                display: flex;
+                gap: 12px;
+            }
+
+            .social-links a {
+                color: #94a3b8;
+                transition: color 0.2s;
+            }
+
+            .social-links a:hover {
+                color: var(--primary-color);
+            }
+
+            @media (max-width: 480px) {
+                .wppg-footer-refined {
+                    flex-direction: column;
+                    text-align: center;
+                    align-items: center;
+                }
+
+                .footer-right {
+                    align-items: center;
+                    text-align: center;
+                }
+            }
     </style>
 </head>
 
@@ -381,7 +382,8 @@
 
         <div class="wppg-footer-refined">
             <div class="footer-left">
-                <span class="plugin-name">WP Project Guard</span>
+                <img src="<?php echo WPPG_URL . 'assets/images/logo-horizontal.webp'; ?>" alt="WP Project Guard"
+                    class="footer-logo">
                 <a href="https://github.com/engrhammadkhurshid/WP-Project-Gaurd" target="_blank" class="get-plugin-btn">
                     <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
                         stroke-linecap="round" stroke-linejoin="round">
