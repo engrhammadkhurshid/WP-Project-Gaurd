@@ -1,17 +1,3 @@
-=== Project Guard ===
-Contributors: hamm007
-Tags: maintenance, coming soon, lock screen, client handover, access control
-Requires at least: 5.8
-Tested up to: 6.9
-Requires PHP: 7.4
-Stable tag: 1.0.0
-License: GPLv2 or later
-License URI: http://www.gnu.org/licenses/gpl-2.0.html
-
-Professionally manage client projects with custom lock screens for maintenance, handover, or payment suspension.
-
-== Description ==
-
 ![Project Guard Logo](assets/images/logo-horizontal.webp)
 
 **Project Guard** minimizes the risk of non-payment or scope creep by allowing you to restrict frontend access with professional, aesthetically pleasing lock screens. Whether you are performing maintenance, handing over a project, or need to temporarily suspend service, Project Guard has the perfect template for the situation.
