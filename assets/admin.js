@@ -17,15 +17,13 @@ jQuery(document).ready(function ($) {
     });
 
     // Template Mode Selection Logic
-    $('.wppg-template-selector .template-option').on('click', function () {
+    // Template Mode Selection Logic
+    $('.wppg-template-selector input[type="radio"]').on('change', function () {
         // Remove 'selected' class from all options
         $('.wppg-template-selector .template-option').removeClass('selected');
 
-        // Add 'selected' class to the clicked one
-        $(this).addClass('selected');
-
-        // Check the radio input inside (even though label usually handles it, this ensures it)
-        $(this).find('input[type="radio"]').prop('checked', true);
+        // Add 'selected' class to the parent label of the checked input
+        $(this).closest('.template-option').addClass('selected');
     });
 
     // Media Uploader

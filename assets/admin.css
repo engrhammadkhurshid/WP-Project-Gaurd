@@ -199,92 +199,36 @@ input:checked+.wppg-slider:before {
 }
 
 /* Template Previews */
+/* Template Previews */
 .template-option .preview {
-    height: 140px;
+    height: 160px;
     width: 100%;
-    background: #f8fafc;
-    border-bottom: 1px solid #f1f5f9;
+    background: #f1f5f9;
+    border-bottom: 1px solid #e2e8f0;
     position: relative;
+    overflow: hidden;
     display: flex;
     align-items: center;
     justify-content: center;
-    overflow: hidden;
 }
 
-/* Fake UI elements inside preview */
-.preview::before {
-    content: "";
-    /* Card */
-    width: 60%;
-    height: 70%;
-    background: #fff;
-    border-radius: 8px;
-    position: absolute;
-    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+.template-option .preview img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: top center;
+    transition: transform 0.5s ease;
 }
 
-/* Polite Preview */
-.preview.polite {
-    background: radial-gradient(circle at center, #f0f9ff 0%, #e0f2fe 100%);
+.template-option:hover .preview img {
+    transform: scale(1.05);
 }
 
-.preview.polite::before {
-    border-top: 4px solid #3b82f6;
-}
-
-.preview.polite::after {
-    content: "Maintenance";
-    position: absolute;
-    font-size: 10px;
-    color: #3b82f6;
-    font-weight: 700;
-    background: #eff6ff;
-    padding: 4px 8px;
-    border-radius: 4px;
-    z-index: 2;
-}
-
-/* Standard Preview */
-.preview.standard {
-    background: radial-gradient(circle at center, #fffbeb 0%, #fef3c7 100%);
-}
-
-.preview.standard::before {
-    border-top: 4px solid #f59e0b;
-}
-
-.preview.standard::after {
-    content: "Handover";
-    position: absolute;
-    font-size: 10px;
-    color: #b45309;
-    font-weight: 700;
-    background: #fff7ed;
-    padding: 4px 8px;
-    border-radius: 4px;
-    z-index: 2;
-}
-
-/* Urgent Preview */
-.preview.urgent {
-    background: #0f172a;
-}
-
-.preview.urgent::before {
-    background: #1e293b;
-    border-top: 4px solid #ef4444;
-}
-
-.preview.urgent::after {
-    content: "Suspended";
-    position: absolute;
-    font-size: 10px;
-    color: #ef4444;
-    font-weight: 700;
-    background: #334155;
-    padding: 4px 8px;
-    border-radius: 4px;
-    z-index: 2;
+/* Placeholder text if image missing */
+.template-option .preview span.placeholder-text {
+    color: #94a3b8;
+    font-size: 13px;
+    font-weight: 500;
 }
 
 .template-option .info {
