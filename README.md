@@ -119,4 +119,4 @@ Protected by **WP Project Guard**.
 *   🚫 **You are NOT allowed to:** Redistribute, resell, or sub-license this plugin as a standalone product or as part of a package without explicit permission.
 *   ✍️ **Attribution:** If you modify the source code, you must retain the credit to the original author ([Engr. Hammad Khurshid](https://github.com/engrhammadkhurshid)) in the plugin headers and documentation.
 
-Copyright © 2024 Engr. Hammad Khurshid. All rights reserved.
+Copyright © 2026 Engr. Hammad Khurshid. All rights reserved.
