@@ -95,7 +95,10 @@ class WPPG_Admin_UI
 
                                 <label class="template-option <?php echo ('polite' === $template_mode) ? 'selected' : ''; ?>">
                                     <input type="radio" name="wppg_settings[template_mode]" value="polite" <?php checked($template_mode, 'polite'); ?>>
-                                    <div class="preview polite"></div>
+                                    <div class="preview polite">
+                                        <img src="<?php echo esc_url(WPPG_URL . 'assets/images/preview-polite.png'); ?>"
+                                            alt="Polite Mode">
+                                    </div>
                                     <div class="info">
                                         <h3>Polite</h3>
                                         <span>Scheduled Maintenance</span>
@@ -104,7 +107,10 @@ class WPPG_Admin_UI
 
                                 <label class="template-option <?php echo ('standard' === $template_mode) ? 'selected' : ''; ?>">
                                     <input type="radio" name="wppg_settings[template_mode]" value="standard" <?php checked($template_mode, 'standard'); ?>>
-                                    <div class="preview standard"></div>
+                                    <div class="preview standard">
+                                        <img src="<?php echo esc_url(WPPG_URL . 'assets/images/preview-standard.png'); ?>"
+                                            alt="Standard Mode">
+                                    </div>
                                     <div class="info">
                                         <h3>Standard</h3>
                                         <span>Project Handover</span>
@@ -113,7 +119,10 @@ class WPPG_Admin_UI
 
                                 <label class="template-option <?php echo ('urgent' === $template_mode) ? 'selected' : ''; ?>">
                                     <input type="radio" name="wppg_settings[template_mode]" value="urgent" <?php checked($template_mode, 'urgent'); ?>>
-                                    <div class="preview urgent"></div>
+                                    <div class="preview urgent">
+                                        <img src="<?php echo esc_url(WPPG_URL . 'assets/images/preview-urgent.png'); ?>"
+                                            alt="Urgent Mode">
+                                    </div>
                                     <div class="info">
                                         <h3>Urgent</h3>
                                         <span>Service Suspended</span>
