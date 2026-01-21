@@ -176,7 +176,8 @@ class WPPG_Admin_UI
                                         <input type="url" name="wppg_settings[payment_link]"
                                             value="<?php echo esc_attr(wppg_get_option('payment_link')); ?>"
                                             class="regular-text">
-                                        <p class="description">e.g. Stripe checkout or Calendly link.</p>
+                                        <p class="description">Optional. e.g., Stripe Invoice, Calendly, or Support
+                                            Portal.<br>If left empty, this button will be hidden.</p>
                                     </td>
                                 </tr>
                             </table>

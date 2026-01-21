@@ -222,6 +222,7 @@
                 transform: translateY(0);
             }
         }
+
         /* Footer Credits */
         .wppg-footer {
             margin-top: 40px;
@@ -243,71 +244,121 @@
         }
     </style>
 </head>
+
 <body>
 
     <div class="container">
-        
+
         <!-- Top Section: Status Message -->
         <div class="message-card">
             <div class="icon-circle">
-                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"></path></svg>
+                <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-linecap="round"
+                    stroke-linejoin="round">
+                    <path
+                        d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z">
+                    </path>
+                </svg>
             </div>
             <h1>Under Maintenance</h1>
-            <p class="desc">We're improving our website to serve you better. We'll be back online shortly with new features.</p>
+            <p class="desc">We're improving our website to serve you better. We'll be back online shortly with new
+                features.</p>
         </div>
 
         <!-- Bottom Section: Developer Bento -->
-        <?php if ( ! empty( $name ) || ! empty( $photo ) ) : ?>
-        <div class="bento-grid">
-            
-            <!-- 1. Profile Card -->
-            <div class="bento-card profile-card">
-                <?php if ( ! empty( $photo ) ) : ?>
-                    <img src="<?php echo esc_url( $photo ); ?>" alt="Developer" class="dev-avatar">
-                <?php endif; ?>
-                <div class="dev-details">
-                    <h3><?php echo esc_html( $name ); ?></h3>
-                    <?php if ( ! empty( $company ) ) : ?>
-                        <span><?php echo esc_html( $company ); ?></span>
-                    <?php else: ?>
-                        <span>Lead Developer</span>
+        <?php if (!empty($name) || !empty($photo)): ?>
+            <div class="bento-grid">
+
+                <!-- 1. Profile Card -->
+                <div class="bento-card profile-card">
+                    <?php if (!empty($photo)): ?>
+                        <img src="<?php echo esc_url($photo); ?>" alt="Developer" class="dev-avatar">
                     <?php endif; ?>
+                    <div class="dev-details">
+                        <h3><?php echo esc_html($name); ?></h3>
+                        <?php if (!empty($company)): ?>
+                            <span><?php echo esc_html($company); ?></span>
+                        <?php else: ?>
+                            <span>Lead Developer</span>
+                        <?php endif; ?>
+                    </div>
                 </div>
+
+                <!-- 2. Contact Stats/Actions -->
+                <?php if (!empty($email)): ?>
+                    <a href="mailto:<?php echo esc_attr($email); ?>" class="bento-card contact-card">
+                        <div class="contact-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                                <polyline points="22,6 12,13 2,6"></polyline>
+                            </svg>
+                        </div>
+                        <span class="contact-label">Email Us</span>
+                    </a>
+                <?php endif; ?>
+
+                <?php if (!empty($phone)): ?>
+                    <a href="tel:<?php echo esc_attr($phone); ?>" class="bento-card contact-card">
+                        <div class="contact-icon">
+                            <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor">
+                                <path
+                                    d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z">
+                                </path>
+                            </svg>
+                        </div>
+                        <span class="contact-label">Call Now</span>
+                    </a>
+                <?php endif; ?>
+
+                <!-- 3. Primary Action (Full Width) -->
+                <?php if (!empty($link)): ?>
+                    <div class="bento-card action-card">
+                        <a href="<?php echo esc_url($link); ?>" class="main-btn">
+                            Visit Support Portal &rarr;
+                        </a>
+                    </div>
+                <?php endif; ?>
+
             </div>
-
-            <!-- 2. Contact Stats/Actions -->
-            <?php if ( ! empty( $email ) ) : ?>
-            <a href="mailto:<?php echo esc_attr( $email ); ?>" class="bento-card contact-card">
-                <div class="contact-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path><polyline points="22,6 12,13 2,6"></polyline></svg>
-                </div>
-                <span class="contact-label">Email Us</span>
-            </a>
-            <?php endif; ?>
-
-            <?php if ( ! empty( $phone ) ) : ?>
-            <a href="tel:<?php echo esc_attr( $phone ); ?>" class="bento-card contact-card">
-                <div class="contact-icon">
-                    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"></path></svg>
-                </div>
-                <span class="contact-label">Call Now</span>
-            </a>
-            <?php endif; ?>
-
-            <!-- 3. Primary Action (Full Width) -->
-            <?php if ( ! empty( $link ) ) : ?>
-            <div class="bento-card action-card">
-                <a href="<?php echo esc_url( $link ); ?>" class="main-btn">
-                    Visit Support Portal &rarr;
-                </a>
-            </div>
-            <?php endif; ?>
-
-        </div>
         <?php endif; ?>
 
-        <div class="wppg-footer">
-            <p>Protected by <a href="https://github.com/hammadkhurshid" target="_blank">WP Project Guard</a></p>
+        <div class="wppg-footer-refined">
+            <div class="footer-left">
+                <span class="plugin-name">WP Project Guard</span>
+                <a href="https://github.com/engrhammadkhurshid/WP-Project-Gaurd" target="_blank" class="get-plugin-btn">
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                        stroke-linecap="round" stroke-linejoin="round">
+                        <path
+                            d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                        </path>
+                    </svg>
+                    Get Plugin
+                </a>
+            </div>
+            <div class="footer-right">
+                <span class="dev-credit">Developed by <strong>Engr. Hammad Khurshid</strong></span>
+                <div class="social-links">
+                    <a href="mailto:engr.hammadkhurshid@gmail.com" title="Email"><svg width="16" height="16"
+                            viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                            <polyline points="22,6 12,13 2,6" />
+                        </svg></a>
+                    <a href="https://github.com/engrhammadkhurshid" target="_blank" title="GitHub"><svg width="16"
+                            height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path
+                                d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
+                            </path>
+                        </svg></a>
+                    <a href="https://linkedin.com/in/hammadkhurshid" target="_blank" title="LinkedIn"><svg width="16"
+                            height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
+                            stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
+                            <rect x="2" y="9" width="4" height="12" />
+                            <circle cx="4" cy="4" r="2" />
+                        </svg></a>
+                </div>
+            </div>
         </div>
 
     </div>
