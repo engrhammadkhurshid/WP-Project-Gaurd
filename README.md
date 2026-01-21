@@ -1,8 +1,22 @@
-# 🛡️ WP Project Guard
+<div align="center">
+  <img src="assets/images/logo-horizontal.webp" alt="WP Project Guard Logo" width="300px" />
+  
+  <br /> <br />
 
-**Secure your work, manage client expectations, and handover projects professionally.**
+  <h1>WP Project Guard</h1>
+  
+  <p>
+    <b>Secure your work, manage client expectations, and handover projects professionally.</b>
+  </p>
 
-**WP Project Guard** is a powerful WordPress plugin designed for freelancers and agencies. It minimizes the risk of non-payment or scope creep by allowing you to restrict frontend access with professional, aesthetically pleasing lock screens. Whether you are performing maintenance, handing over a project, or need to temporarily suspend service, WP Project Guard has the perfect template for the situation.
+  <p>
+    <i>A professional access control plugin designed for freelancers and agencies.</i>
+  </p>
+</div>
+
+<br />
+
+**WP Project Guard** minimizes the risk of non-payment or scope creep by allowing you to restrict frontend access with professional, aesthetically pleasing lock screens. Whether you are performing maintenance, handing over a project, or need to temporarily suspend service, WP Project Guard has the perfect template for the situation.
 
 ---
 
@@ -93,3 +107,16 @@ wp-project-guard/
 **Developed by:** [Engr. Hammad Khurshid](https://github.com/engrhammadkhurshid)
 
 Protected by **WP Project Guard**.
+
+---
+
+## 📄 License & Usage
+
+**WP Project Guard** is free to use for personal and commercial projects.
+
+*   ✅ **You are free to:** Use this plugin on unlimited websites, for yourself or your clients, free of charge.
+*   ✅ **You are free to:** Modify the code for personal use or to fit specific project needs.
+*   🚫 **You are NOT allowed to:** Redistribute, resell, or sub-license this plugin as a standalone product or as part of a package without explicit permission.
+*   ✍️ **Attribution:** If you modify the source code, you must retain the credit to the original author ([Engr. Hammad Khurshid](https://github.com/engrhammadkhurshid)) in the plugin headers and documentation.
+
+Copyright © 2024 Engr. Hammad Khurshid. All rights reserved.
