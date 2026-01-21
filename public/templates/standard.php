@@ -15,10 +15,9 @@
         @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;800&display=swap');
 
         :root {
-            --bg-color: #fffbeb;
-            /* Warm light yellow */
+            --bg-color: #ffffff;
+            /* User requested white background */
             --text-main: #451a03;
-            /* Dark brown/orange */
             --text-muted: #92400e;
             --primary-gradient: linear-gradient(135deg, #f59e0b 0%, #d97706 100%);
             --accent-color: #f59e0b;
@@ -32,9 +31,7 @@
             padding: 0;
             font-family: 'Outfit', sans-serif;
             background-color: var(--bg-color);
-            /* Subtle dot pattern */
-            background-image:
-                radial-gradient(var(--border-color) 1px, transparent 1px);
+            background-image: radial-gradient(#fde68a 1px, transparent 1px);
             background-size: 24px 24px;
             height: 100vh;
             display: flex;
@@ -53,7 +50,7 @@
         .glass-panel {
             background: rgba(255, 255, 255, 0.95);
             backdrop-filter: blur(10px);
-            border: 1px solid rgba(255, 255, 255, 0.2);
+            border: 1px solid rgba(255, 255, 255, 0.5);
             border-radius: 24px;
             padding: 40px;
             box-shadow: var(--shadow);
@@ -210,6 +207,82 @@
             100% {
                 opacity: 1;
                 transform: scale(1);
+            }
+        }
+
+        /* Refined Footer Styles */
+        .wppg-footer-refined {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid #fed7aa;
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            font-size: 13px;
+            color: #92400e;
+        }
+
+        .footer-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .plugin-name {
+            font-weight: 600;
+        }
+
+        .get-plugin-btn {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #b45309;
+            text-decoration: none;
+            font-weight: 600;
+            background: #fff7ed;
+            padding: 4px 10px;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+
+        .get-plugin-btn:hover {
+            background: #ffedd5;
+        }
+
+        .footer-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 5px;
+            text-align: right;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-links a {
+            color: #b45309;
+            transition: color 0.2s;
+        }
+
+        .social-links a:hover {
+            color: #78350f;
+        }
+
+        @media (max-width: 480px) {
+            .wppg-footer-refined {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+            }
+
+            .footer-right {
+                align-items: center;
+                text-align: center;
             }
         }
     </style>

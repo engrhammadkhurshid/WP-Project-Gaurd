@@ -15,23 +15,28 @@
         @import url('https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700&display=swap');
 
         :root {
-            --bg-color: #0f172a;
-            /* Very dark slate */
+            --bg-color: #ffffff;
+            /* User requested white background */
+            --page-bg: #ffffff;
+            /* Explicit page background */
             --text-main: #f8fafc;
-            --text-muted: #94a3b8;
+            --text-dark: #cbd5e1;
+            /* For text on dark card */
             --primary: #ef4444;
             /* Critical red */
             --primary-gradient: linear-gradient(135deg, #ef4444 0%, #dc2626 100%);
             --surface-color: #1e293b;
+            /* Dark card color */
             --border-color: #334155;
             --shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.5);
+            --footer-text: #94a3b8;
         }
 
         body {
             margin: 0;
             padding: 0;
             font-family: 'Outfit', sans-serif;
-            background-color: var(--bg-color);
+            background-color: var(--page-bg);
             height: 100vh;
             display: flex;
             align-items: center;
@@ -55,6 +60,8 @@
             text-align: center;
             border-top: 4px solid var(--primary);
             animation: shake 0.5s cubic-bezier(.36, .07, .19, .97) both;
+            color: #fff;
+            /* Ensure text inside card is white */
         }
 
         .icon-pulse {
@@ -81,7 +88,7 @@
         }
 
         p.desc {
-            color: var(--text-muted);
+            color: var(--text-dark);
             line-height: 1.6;
             font-size: 15px;
             margin-bottom: 30px;
@@ -97,7 +104,6 @@
 
         .bento-cell {
             background: #253347;
-            /* Slightly lighter than surface */
             border: 1px solid var(--border-color);
             padding: 14px;
             border-radius: 12px;
@@ -222,6 +228,85 @@
             40%,
             60% {
                 transform: translate3d(4px, 0, 0);
+            }
+        }
+
+        /* Refined Footer Styles */
+        .wppg-footer-refined {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+            font-size: 13px;
+            color: var(--footer-text);
+            /* Ensure good contrast on dark card */
+        }
+
+        .footer-left {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .plugin-name {
+            font-weight: 600;
+            color: #cbd5e1;
+        }
+
+        .get-plugin-btn {
+            display: flex;
+            align-items: center;
+            gap: 5px;
+            color: #fff;
+            /* White text for contrast */
+            text-decoration: none;
+            font-weight: 600;
+            background: rgba(255, 255, 255, 0.1);
+            padding: 4px 10px;
+            border-radius: 6px;
+            transition: background 0.2s;
+        }
+
+        .get-plugin-btn:hover {
+            background: rgba(255, 255, 255, 0.2);
+        }
+
+        .footer-right {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 5px;
+            text-align: right;
+        }
+
+        .social-links {
+            display: flex;
+            gap: 12px;
+        }
+
+        .social-links a {
+            color: var(--footer-text);
+            transition: color 0.2s;
+        }
+
+        .social-links a:hover {
+            color: #fff;
+        }
+
+        @media (max-width: 480px) {
+            .wppg-footer-refined {
+                flex-direction: column;
+                text-align: center;
+                align-items: center;
+            }
+
+            .footer-right {
+                align-items: center;
+                text-align: center;
             }
         }
     </style>
