@@ -158,25 +158,28 @@ class WPPG_Admin_UI
                                 <tr>
                                     <th scope="row">Name</th>
                                     <td><input type="text" name="wppg_settings[dev_name]"
-                                            value="<?php echo esc_attr(wppg_get_option('dev_name')); ?>" class="regular-text">
+                                            value="<?php echo esc_attr(wppg_get_option('dev_name')); ?>" class="regular-text"
+                                            placeholder="John Doe">
                                     </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">Company / Agency</th>
                                     <td><input type="text" name="wppg_settings[dev_company]"
-                                            value="<?php echo esc_attr(wppg_get_option('dev_company')); ?>"
-                                            class="regular-text"></td>
+                                            value="<?php echo esc_attr(wppg_get_option('dev_company')); ?>" class="regular-text"
+                                            placeholder="JD Solutions LLC"></td>
                                 </tr>
                                 <tr>
                                     <th scope="row">Email</th>
                                     <td><input type="email" name="wppg_settings[dev_email]"
-                                            value="<?php echo esc_attr(wppg_get_option('dev_email')); ?>" class="regular-text">
+                                            value="<?php echo esc_attr(wppg_get_option('dev_email')); ?>" class="regular-text"
+                                            placeholder="john@example.com">
                                     </td>
                                 </tr>
                                 <tr>
                                     <th scope="row">Phone / WhatsApp</th>
                                     <td><input type="text" name="wppg_settings[dev_phone]"
-                                            value="<?php echo esc_attr(wppg_get_option('dev_phone')); ?>" class="regular-text">
+                                            value="<?php echo esc_attr(wppg_get_option('dev_phone')); ?>" class="regular-text"
+                                            placeholder="+1 (555) 000-0000">
                                     </td>
                                 </tr>
                                 <tr>
@@ -184,7 +187,7 @@ class WPPG_Admin_UI
                                     <td>
                                         <input type="url" name="wppg_settings[payment_link]"
                                             value="<?php echo esc_attr(wppg_get_option('payment_link')); ?>"
-                                            class="regular-text">
+                                            class="regular-text" placeholder="https://stripe.com/invoice/...">
                                         <p class="description">Optional. e.g., Stripe Invoice, Calendly, or Support
                                             Portal.<br>If left empty, this button will be hidden.</p>
                                     </td>

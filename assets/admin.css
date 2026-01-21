@@ -279,19 +279,73 @@ input:checked+.wppg-slider:before {
 }
 
 /* Developer Profile Form */
+/* Remove default WP table borders/lines */
+.form-table th,
+.form-table td {
+    padding: 15px 10px !important;
+    vertical-align: middle;
+}
+
 .form-table th {
     font-weight: 500;
-    color: #1e293b;
+    color: #475569;
+    width: 200px;
 }
 
 .form-table input[type="text"],
 .form-table input[type="email"],
 .form-table input[type="url"] {
     width: 100%;
-    max-width: 400px;
-    padding: 8px 12px;
-    border-radius: 6px;
+    max-width: 450px;
+    padding: 10px 14px;
+    border-radius: 8px;
     border: 1px solid #cbd5e1;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05);
+    background: #f8fafc;
+    transition: all 0.2s ease;
+    font-size: 14px;
+}
+
+.form-table input:focus {
+    border-color: #2563eb;
+    background: #fff;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+    outline: none;
+}
+
+/* Image Upload Area */
+.image-preview-wrapper {
+    margin-bottom: 12px;
+}
+
+.image-preview-wrapper img {
+    border-radius: 50%;
+    box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1);
+    width: 80px;
+    height: 80px;
+    object-fit: cover;
+}
+
+/* Buttons inside form */
+.button.wppg-upload-action {
+    background: #fff !important;
+    border: 1px solid #cbd5e1 !important;
+    color: #475569 !important;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05) !important;
+    transition: all 0.2s !important;
+}
+
+.button.wppg-upload-action:hover {
+    border-color: #94a3b8 !important;
+    color: #1e293b !important;
+}
+
+.button.wppg-remove-img {
+    border: none !important;
+    color: #ef4444 !important;
+    background: none !important;
+    box-shadow: none !important;
+    text-decoration: underline;
 }
 
 /* About Tab */
