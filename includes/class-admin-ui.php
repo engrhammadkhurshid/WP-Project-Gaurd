@@ -50,7 +50,7 @@ class WPPG_Admin_UI
         ?>
         <div class="wrap wppg-dashboard">
             <div class="wppg-header-brand">
-                <img src="<?php echo WPPG_URL . 'assets/images/logo-horizontal.webp'; ?>" alt="WP Project Guard"
+                <img src="<?php echo esc_url(WPPG_URL . 'assets/images/logo-horizontal.webp'); ?>" alt="WP Project Guard"
                     class="wppg-main-logo">
             </div>
 
@@ -96,7 +96,7 @@ class WPPG_Admin_UI
                                 <label class="template-option <?php echo ('polite' === $template_mode) ? 'selected' : ''; ?>">
                                     <input type="radio" name="wppg_settings[template_mode]" value="polite" <?php checked($template_mode, 'polite'); ?>>
                                     <div class="preview polite">
-                                        <img src="<?php echo WPPG_URL . 'assets/images/preview-polite.png'; ?>"
+                                        <img src="<?php echo esc_url(WPPG_URL . 'assets/images/preview-polite.png'); ?>"
                                             alt="Polite Mode Preview">
                                     </div>
                                     <div class="info">
@@ -108,7 +108,7 @@ class WPPG_Admin_UI
                                 <label class="template-option <?php echo ('standard' === $template_mode) ? 'selected' : ''; ?>">
                                     <input type="radio" name="wppg_settings[template_mode]" value="standard" <?php checked($template_mode, 'standard'); ?>>
                                     <div class="preview standard">
-                                        <img src="<?php echo WPPG_URL . 'assets/images/preview-standard.png'; ?>"
+                                        <img src="<?php echo esc_url(WPPG_URL . 'assets/images/preview-standard.png'); ?>"
                                             alt="Standard Mode Preview">
                                     </div>
                                     <div class="info">
@@ -120,7 +120,7 @@ class WPPG_Admin_UI
                                 <label class="template-option <?php echo ('urgent' === $template_mode) ? 'selected' : ''; ?>">
                                     <input type="radio" name="wppg_settings[template_mode]" value="urgent" <?php checked($template_mode, 'urgent'); ?>>
                                     <div class="preview urgent">
-                                        <img src="<?php echo WPPG_URL . 'assets/images/preview-urgent.png'; ?>"
+                                        <img src="<?php echo esc_url(WPPG_URL . 'assets/images/preview-urgent.png'); ?>"
                                             alt="Urgent Mode Preview">
                                     </div>
                                     <div class="info">
@@ -197,8 +197,8 @@ class WPPG_Admin_UI
                     <div id="about" class="wppg-tab-content">
                         <div class="wppg-card about-card">
                             <div class="about-header-branding">
-                                <img src="<?php echo WPPG_URL . 'assets/images/brandmark.webp'; ?>" alt="WP Project Guard"
-                                    class="wppg-brandmark-logo">
+                                <img src="<?php echo esc_url(WPPG_URL . 'assets/images/brandmark.webp'); ?>"
+                                    alt="WP Project Guard" class="wppg-brandmark-logo">
                             </div>
                             <h2>About WP Project Guard</h2>
                             <p><strong>Developer:</strong> Engr. Hammad Khurshid</p>

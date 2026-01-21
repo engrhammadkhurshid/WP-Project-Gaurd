@@ -30,6 +30,7 @@ class WPPG_Guard
         $bypass_key = wppg_get_option('bypass_key');
 
         // Check URL parameter
+        // phpcs:ignore WordPress.Security.NonceVerification.Recommended -- Public bypass key check, no action performed.
         if (!empty($bypass_key) && isset($_GET['guard_bypass']) && $_GET['guard_bypass'] === $bypass_key) {
             // Valid key provided. Set a cookie for 24 hours to allow navigation.
             setcookie('wppg_bypass_auth', md5($bypass_key), time() + DAY_IN_SECONDS, COOKIEPATH, COOKIE_DOMAIN);

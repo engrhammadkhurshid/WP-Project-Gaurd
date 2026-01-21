@@ -4,6 +4,11 @@
  * Theme: Critical Red, Dark Mode, High Contrast, Bento Grid for resolution
  */
 ?>
+<?php
+if (!defined('ABSPATH')) {
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 

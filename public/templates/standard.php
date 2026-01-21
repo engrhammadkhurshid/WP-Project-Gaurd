@@ -4,6 +4,11 @@
  * Theme: Warm/Orange gradients, Professional "Construction" Vibe, Bento Grid for Dev Info
  */
 ?>
+<?php
+if (!defined('ABSPATH')) {
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 

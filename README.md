@@ -1,26 +1,22 @@
-<div align="center">
-  <img src="assets/images/logo-horizontal.webp" alt="WP Project Guard Logo" width="300px" />
-  
-  <br /> <br />
+=== Project Guard ===
+Contributors: hamm007
+Tags: maintenance, coming soon, lock screen, client handover, access control
+Requires at least: 5.8
+Tested up to: 6.7
+Requires PHP: 7.4
+Stable tag: 1.0.0
+License: GPLv2 or later
+License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-  <h1>WP Project Guard</h1>
-  
-  <p>
-    <b>Secure your work, manage client expectations, and handover projects professionally.</b>
-  </p>
+Project Guard helps you professionally manage client projects by restricting frontend access with custom lock screens for maintenance, handover, or payment suspension.
 
-  <p>
-    <i>A professional access control plugin designed for freelancers and agencies.</i>
-  </p>
-</div>
+== Description ==
 
-<br />
+**Project Guard** minimizes the risk of non-payment or scope creep by allowing you to restrict frontend access with professional, aesthetically pleasing lock screens. Whether you are performing maintenance, handing over a project, or need to temporarily suspend service, Project Guard has the perfect template for the situation.
 
-**WP Project Guard** minimizes the risk of non-payment or scope creep by allowing you to restrict frontend access with professional, aesthetically pleasing lock screens. Whether you are performing maintenance, handing over a project, or need to temporarily suspend service, WP Project Guard has the perfect template for the situation.
+This plugin is designed specifically for **freelancers and agencies** who need a simple but effective way to control client access while maintaining a professional image.
 
----
-
-## ✨ Key Features
+### ✨ Key Features
 
 *   **Three Professional Lock Modes:**
     *   **🔵 Polite (Scheduled Maintenance):** A friendly, calmness-inducing blue theme to inform visitors of temporary updates.

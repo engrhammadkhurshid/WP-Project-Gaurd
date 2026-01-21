@@ -4,6 +4,11 @@
  * Theme: Clean, Professional Blue w/ Bento Grid Contact Info
  */
 ?>
+<?php
+if (!defined('ABSPATH')) {
+    exit;
+}
+?>
 <!DOCTYPE html>
 <html lang="en">
 
