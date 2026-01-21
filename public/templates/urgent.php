@@ -53,6 +53,7 @@ if (!defined('ABSPATH')) {
             width: 100%;
             max-width: 500px;
             padding: 24px;
+            margin-top: 30px;
         }
 
         /* Card Layout */
@@ -236,84 +237,110 @@ if (!defined('ABSPATH')) {
             }
         }
 
-        /* Refined Footer Styles */
+        /* Redesigned Footer Styles */
         .wppg-footer-refined {
             margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid var(--border-color);
-            display: flex;
-            flex-wrap: wrap;
-            align-items: center;
-            justify-content: space-between;
-            gap: 15px;
-            font-size: 13px;
-            color: var(--footer-text);
-            /* Ensure good contrast on dark card */
+            padding: 30px 0 20px;
+            background: #1e293b;
+            border-top: 2px solid #334155;
+            text-align: center;
         }
 
-        .footer-left {
-            display: flex;
-            align-items: center;
-            gap: 15px;
-            /* Increased gap */
+        .footer-logo-row {
+            margin-bottom: 20px;
         }
 
         .footer-logo {
-            height: 28px;
+            height: 100px;
             width: auto;
-            display: block;
+            display: inline-block;
+            object-fit: contain;
+            background: #ffffff;
+            padding: 10px 20px;
+            border-radius: 12px;
+        }
+
+        .footer-button-row {
+            margin-bottom: 25px;
         }
 
         .get-plugin-btn {
-            display: flex;
+            display: inline-flex;
             align-items: center;
-            gap: 5px;
-            color: #fff;
-            /* White text for contrast */
+            gap: 8px;
+            color: #ffffff;
+            background: var(--primary-gradient);
             text-decoration: none;
             font-weight: 600;
-            background: rgba(255, 255, 255, 0.1);
-            padding: 4px 10px;
-            border-radius: 6px;
-            transition: background 0.2s;
+            font-size: 15px;
+            padding: 12px 28px;
+            border-radius: 10px;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 12px rgba(239, 68, 68, 0.3);
         }
 
         .get-plugin-btn:hover {
-            background: rgba(255, 255, 255, 0.2);
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(239, 68, 68, 0.4);
         }
 
-        .footer-right {
+        .footer-credits-row {
             display: flex;
-            flex-direction: column;
-            align-items: flex-end;
-            gap: 5px;
-            text-align: right;
+            justify-content: space-between;
+            align-items: center;
+            padding-top: 20px;
+            border-top: 1px solid #334155;
+            gap: 20px;
+        }
+
+        .dev-credit {
+            color: #94a3b8;
+            font-size: 14px;
+        }
+
+        .dev-credit strong {
+            color: #cbd5e1;
+            font-weight: 600;
         }
 
         .social-links {
             display: flex;
             gap: 12px;
+            align-items: center;
         }
 
         .social-links a {
-            color: var(--footer-text);
-            transition: color 0.2s;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            width: 36px;
+            height: 36px;
+            border-radius: 8px;
+            background: #253347;
+            color: #94a3b8;
+            transition: all 0.2s ease;
         }
 
         .social-links a:hover {
-            color: #fff;
+            background: var(--primary);
+            color: #ffffff;
+            transform: translateY(-2px);
         }
 
         @media (max-width: 480px) {
-            .wppg-footer-refined {
-                flex-direction: column;
-                text-align: center;
-                align-items: center;
+            .footer-logo {
+                height: 70px;
             }
 
-            .footer-right {
-                align-items: center;
+            .footer-credits-row {
+                flex-direction: column;
                 text-align: center;
+                gap: 15px;
+            }
+
+            .get-plugin-btn {
+                font-size: 14px;
+                padding: 10px 24px;
             }
         }
     </style>
@@ -337,8 +364,11 @@ if (!defined('ABSPATH')) {
             <p class="desc">This website has been temporarily suspended pending a required action or payment. Please
                 contact the administrator immediately to restore access.</p>
 
+
             <!-- Bento Grid Start -->
             <?php if (!empty($name) || !empty($photo)): ?>
+                <h4 style="color: #cbd5e1; font-size: 14px; font-weight: 500; margin: 0 0 16px 0; text-align: left;">Reach
+                    out to</h4>
                 <div class="bento-grid">
 
                     <!-- Developer Identity -->
@@ -347,7 +377,7 @@ if (!defined('ABSPATH')) {
                             <img src="<?php echo esc_url($photo); ?>" alt="Developer" class="dev-img">
                         <?php endif; ?>
                         <div class="dev-meta">
-                            <h3>Contact <?php echo esc_html($name); ?></h3>
+                            <h3><?php echo esc_html($name); ?></h3>
                             <?php if (!empty($company)): ?>
                                 <span><?php echo esc_html($company); ?></span>
                             <?php endif; ?>
@@ -388,12 +418,14 @@ if (!defined('ABSPATH')) {
             <?php endif; ?>
 
             <div class="wppg-footer-refined">
-                <div class="footer-left">
-                    <img src="<?php echo WPPG_URL . 'assets/images/logo-horizontal.webp'; ?>" alt="WP Project Guard"
-                        class="footer-logo">
+                <div class="footer-logo-row">
+                    <img src="<?php echo esc_url(WPPG_URL . 'assets/images/logo-horizontal.webp'); ?>"
+                        alt="WP Project Guard" class="footer-logo">
+                </div>
+                <div class="footer-button-row">
                     <a href="https://github.com/engrhammadkhurshid/WP-Project-Gaurd" target="_blank"
                         class="get-plugin-btn">
-                        <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                             stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                             <path
                                 d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
@@ -402,30 +434,35 @@ if (!defined('ABSPATH')) {
                         Get Plugin
                     </a>
                 </div>
-                <div class="footer-right">
-                    <span class="dev-credit">Developed by <strong>Engr. Hammad Khurshid</strong></span>
+                <div class="footer-credits-row">
+                    <div class="dev-credit">
+                        Developed by <strong>Engr. Hammad Khurshid</strong>
+                    </div>
                     <div class="social-links">
-                        <a href="mailto:engr.hammadkhurshid@gmail.com" title="Email"><svg width="16" height="16"
-                                viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
-                                <polyline points="22,6 12,13 2,6" />
-                            </svg></a>
-                        <a href="https://github.com/engrhammadkhurshid" target="_blank" title="GitHub"><svg width="16"
-                                height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"
-                                stroke-linecap="round" stroke-linejoin="round">
-                                <path
-                                    d="M9 19c-5 1.5-5-2.5-7-3m14 6v-3.87a3.37 3.37 0 0 0-.94-2.61c3.14-.35 6.44-1.54 6.44-7A5.44 5.44 0 0 0 20 4.77 5.07 5.07 0 0 0 19.91 1S18.73.65 16 2.48a13.38 13.38 0 0 0-7 0C6.27.65 5.09 1 5.09 1A5.07 5.07 0 0 0 5 4.77a5.44 5.44 0 0 0-1.5 3.78c0 5.42 3.3 6.61 6.44 7A3.37 3.37 0 0 0 9 18.13V22">
-                                </path>
-                            </svg></a>
-                        <a href="https://linkedin.com/in/hammadkhurshid" target="_blank" title="LinkedIn"><svg
-                                width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                        <a href="https://www.linkedin.com/in/hammadkhurshid" target="_blank" title="LinkedIn">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
                                 stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
                                 <path
                                     d="M16 8a6 6 0 0 1 6 6v7h-4v-7a2 2 0 0 0-2-2 2 2 0 0 0-2 2v7h-4v-7a6 6 0 0 1 6-6z" />
                                 <rect x="2" y="9" width="4" height="12" />
                                 <circle cx="4" cy="4" r="2" />
-                            </svg></a>
+                            </svg>
+                        </a>
+                        <a href="mailto:engr.hammadkhurshid@gmail.com" title="Email">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z" />
+                                <polyline points="22,6 12,13 2,6" />
+                            </svg>
+                        </a>
+                        <a href="https://wa.me/923367126719" target="_blank" title="WhatsApp">
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor"
+                                stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+                                <path
+                                    d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z">
+                                </path>
+                            </svg>
+                        </a>
                     </div>
                 </div>
             </div>

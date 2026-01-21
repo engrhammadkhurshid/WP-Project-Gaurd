@@ -56,13 +56,13 @@ class WPPG_Guard
         // Get Data for Template
         $template_mode = wppg_get_option('template_mode', 'polite');
 
-        // Prepare Developer Data
+        // Prepare Developer Data with fallbacks
         $dev_data = array(
-            'photo' => wppg_get_option('dev_photo'),
-            'name' => wppg_get_option('dev_name'),
-            'company' => wppg_get_option('dev_company'),
-            'email' => wppg_get_option('dev_email'),
-            'phone' => wppg_get_option('dev_phone'),
+            'photo' => wppg_get_option('dev_photo') ?: WPPG_URL . 'assets/images/placeholder-avatar.png',
+            'name' => wppg_get_option('dev_name') ?: 'John Doe',
+            'company' => wppg_get_option('dev_company') ?: 'Web Solutions LLC',
+            'email' => wppg_get_option('dev_email') ?: 'developer@example.com',
+            'phone' => wppg_get_option('dev_phone') ?: '+1 (555) 123-4567',
             'link' => wppg_get_option('payment_link'),
         );
 

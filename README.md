@@ -2,13 +2,13 @@
 Contributors: hamm007
 Tags: maintenance, coming soon, lock screen, client handover, access control
 Requires at least: 5.8
-Tested up to: 6.7
+Tested up to: 6.9
 Requires PHP: 7.4
 Stable tag: 1.0.0
 License: GPLv2 or later
 License URI: http://www.gnu.org/licenses/gpl-2.0.html
 
-Project Guard helps you professionally manage client projects by restricting frontend access with custom lock screens for maintenance, handover, or payment suspension.
+Professionally manage client projects with custom lock screens for maintenance, handover, or payment suspension.
 
 == Description ==
 
@@ -96,6 +96,38 @@ wp-project-guard/
 ├── wp-project-guard.php     # Main Plugin File
 └── uninstall.php            # Cleanup script
 ```
+
+---
+
+## 📝 Changelog
+
+### Version 1.0.0 - 2026-01-22
+
+**WordPress.org Compliance Updates:**
+* ✅ Fixed security issue: Added proper escaping for WPPG_URL constant using esc_url()
+* ✅ Updated "Tested up to" version from 6.7 to 6.9
+* ✅ Shortened plugin description to meet 150 character limit
+* ✅ All WordPress coding standards compliance issues resolved
+
+**UI/UX Improvements:**
+* 🎨 Enlarged dashboard logo from 80px to 150px for better visibility
+* 🎨 Improved logo centering in WordPress admin dashboard
+* 🎨 Enhanced footer design with three-row layout across all templates
+* 🎨 Added white background with border-radius to footer logos
+* 🎨 Fixed template thumbnail display in mode selector
+* 📱 Added 30px top margin to all lock screen templates for better spacing
+
+**Developer Experience:**
+* 🔧 Removed personal information from default values
+* 🔧 Added fallback dummy data for empty developer fields
+* 🔧 Created placeholder avatar image for professional appearance
+* 🔧 Improved "Reach out to" label positioning in urgent mode
+* 🔧 Streamlined social icons (LinkedIn, Email, WhatsApp only)
+
+**Security & Performance:**
+* 🔒 All output properly escaped using WordPress escaping functions
+* 🔒 Enhanced XSS protection across all templates
+* ⚡ Optimized asset loading and template rendering
 
 ---
 

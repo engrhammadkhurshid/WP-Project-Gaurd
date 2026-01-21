@@ -24,10 +24,10 @@ if (!function_exists('wppg_get_option')) {
             'status' => 'off',
             'bypass_key' => '',
             'template_mode' => 'polite',
-            'dev_name' => 'Engr. Hammad Khurshid',
+            'dev_name' => '',
             'dev_photo' => '',
             'dev_company' => '',
-            'dev_email' => 'engr.hammadkhurshid@gmail.com',
+            'dev_email' => '',
             'dev_phone' => '',
             'payment_link' => '',
         );
