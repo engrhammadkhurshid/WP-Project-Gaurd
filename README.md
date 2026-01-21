@@ -12,9 +12,25 @@ Professionally manage client projects with custom lock screens for maintenance, 
 
 == Description ==
 
+![Project Guard Logo](assets/images/logo-horizontal.webp)
+
 **Project Guard** minimizes the risk of non-payment or scope creep by allowing you to restrict frontend access with professional, aesthetically pleasing lock screens. Whether you are performing maintenance, handing over a project, or need to temporarily suspend service, Project Guard has the perfect template for the situation.
 
 This plugin is designed specifically for **freelancers and agencies** who need a simple but effective way to control client access while maintaining a professional image.
+
+## 🎨 Template Previews
+
+### Polite Mode (Scheduled Maintenance)
+![Polite Mode Preview](assets/images/preview-polite.png)
+*A friendly, calmness-inducing blue theme to inform visitors of temporary updates.*
+
+### Standard Mode (Handover in Progress)
+![Standard Mode Preview](assets/images/preview-standard.png)
+*A professional "construction/work in progress" orange theme, perfect for the pre-launch phase.*
+
+### Urgent Mode (Service Suspended)
+![Urgent Mode Preview](assets/images/preview-urgent.png)
+*A high-contrast, critical red theme for situations requiring immediate attention (e.g., pending payments).*
 
 ### ✨ Key Features
 
